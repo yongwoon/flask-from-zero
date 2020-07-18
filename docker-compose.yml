@@ -1,0 +1,19 @@
+version: "3"
+services:
+  api:
+    restart: always
+    build:
+      context: ./
+      dockerfile: ./Dockerfile.dev
+    container_name: "dev_flask_app"
+    working_dir: "/var/www/app"
+    tty: true
+    volumes:
+      - ./:/var/www/app
+    ports:
+      - 5000:5000
+    networks:
+      - dev_flask_app_network
+
+networks:
+  dev_flask_app_network:
