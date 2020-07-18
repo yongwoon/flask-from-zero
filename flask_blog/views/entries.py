@@ -2,6 +2,10 @@ from flask import request, redirect, url_for, render_template, flash, session
 from flask_blog import app
 from flask_blog import db
 from flask_blog.models.entries import Entry
+from flask_blog.views.views import login_required
+from flask import Blueprint
+
+entry = Blueprint('entry', __name__)
 
 
 @app.route('/')
@@ -21,7 +25,7 @@ def add_entry():
     db.session.add(entry)
     db.session.commit()
     flash('新しく記事が作成されました')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('entry.show_entries'))
 
 
 @app.route('/entries/new', methods=['GET'])
@@ -53,7 +57,7 @@ def update_entry(id):
     db.session.merge(entry)
     db.session.commit()
     flash('記事が更新されました')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('entry.show_entries'))
 
 
 @app.route('/entries/<int:id>/delete', methods=['POST'])
@@ -63,4 +67,4 @@ def delete_entry(id):
     db.session.delete(entry)
     db.session.commit()
     flash('投稿が削除されました')
-    return redirect(url_for('show_entries'))
+    return redirect(url_for('entry.show_entries'))
