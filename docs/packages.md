@@ -5,6 +5,8 @@
 pip install flask
 # db
 pip install Flask-SQLAlchemy
+# db
+pip install Flask-Script
 ```
 
 ## check installed package
