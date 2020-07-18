@@ -3,6 +3,8 @@
 ```bash
 # framework
 pip install flask
+# db
+pip install Flask-SQLAlchemy
 ```
 
 ## check installed package
