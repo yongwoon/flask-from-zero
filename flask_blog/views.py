@@ -19,6 +19,7 @@ def login():
             print('パスワードが異なります')
         else:
             session['logged_in'] = True
+            flash('ログインしました。')
             return redirect('/')
 
     return render_template('login.html')
@@ -27,4 +28,5 @@ def login():
 @app.route('/logout')
 def logout():
     session.pop('logged_in', None)
+    flash('ログアウトしました。')
     return redirect('/')
