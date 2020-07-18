@@ -13,3 +13,15 @@ docker-compose build --no-cache
 ```bash
 docker-compose up
 ```
+
+- install package in container
+
+```bash
+pip install --upgrade -r requirements.txt
+```
+
+- Set database
+
+```bash
+python manage.py init_db
+```
