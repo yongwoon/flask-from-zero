@@ -30,3 +30,9 @@ pipenv shell
 ```bash
 pipenv install Flask
 ```
+
+- install Flask-SQLAlchemy
+
+```bash
+pipenv install Flask-SQLAlchemy
+```
