@@ -1,3 +1,5 @@
 flask_blog/__pycache__
-flask_blog/scripts/__pycache__
 flask_blog/flask_blog.db
+flask_blog/scripts/__pycache__
+flask_blog/views/__pycache__
+flask_blog/models/__pycache__
