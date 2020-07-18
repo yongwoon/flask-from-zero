@@ -8,14 +8,14 @@ from flask import Blueprint
 entry = Blueprint('entry', __name__)
 
 
-@app.route('/')
+@entry.route('/')
 @login_required
 def show_entries():
     entries = Entry.query.order_by(Entry.id.desc()).all()
     return render_template('entries/index.html', entries=entries)
 
 
-@app.route('/entries', methods=['POST'])
+@entry.route('/entries', methods=['POST'])
 @login_required
 def add_entry():
     entry = Entry(
@@ -28,27 +28,27 @@ def add_entry():
     return redirect(url_for('entry.show_entries'))
 
 
-@app.route('/entries/new', methods=['GET'])
+@entry.route('/entries/new', methods=['GET'])
 @login_required
 def new_entry():
     return render_template('entries/new.html')
 
 
-@app.route('/entries/<int:id>', methods=['GET'])
+@entry.route('/entries/<int:id>', methods=['GET'])
 @login_required
 def show_entry(id):
     entry = Entry.query.get(id)
     return render_template('entries/show.html', entry=entry)
 
 
-@app.route('/entries/<int:id>/edit', methods=['GET'])
+@entry.route('/entries/<int:id>/edit', methods=['GET'])
 @login_required
 def edit_entry(id):
     entry = Entry.query.get(id)
     return render_template('entries/edit.html', entry=entry)
 
 
-@app.route('/entries/<int:id>/update', methods=['POST'])
+@entry.route('/entries/<int:id>/update', methods=['POST'])
 @login_required
 def update_entry(id):
     entry = Entry.query.get(id)
@@ -60,7 +60,7 @@ def update_entry(id):
     return redirect(url_for('entry.show_entries'))
 
 
-@app.route('/entries/<int:id>/delete', methods=['POST'])
+@entry.route('/entries/<int:id>/delete', methods=['POST'])
 @login_required
 def delete_entry(id):
     entry = Entry.query.get(id)
