@@ -4,6 +4,12 @@
 
 - [開発環境の設定](./docs/dev.md)
 
+## How to run test code
+
+```bash
+python test_flask_blog.py
+```
+
 ## Appendix
 
 - [blueprint](./docs/blueprint.md)

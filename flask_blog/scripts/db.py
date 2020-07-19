@@ -14,3 +14,9 @@ class InitDB(Command):
 # python
 # db.create_all()
 # ```
+
+class DropDB(Command):
+    "drop database"
+
+    def run(self):
+        db.drop_all()
