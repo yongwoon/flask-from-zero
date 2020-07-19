@@ -10,6 +10,27 @@
 python test_flask_blog.py
 ```
 
+## Run test via coverage
+
+```bash
+coverage run -m unittest
+```
+
+## test coverage の計測
+
+```bash
+coverage report -m
+```
+
+- Atrributes
+
+| attribute | body                                    |
+| --------- | --------------------------------------- |
+| name      | test 対象の file                        |
+| Stmts     | file における test 対象となる code 行数 |
+| Miss      | Test されていない code 行数             |
+| Cover     | Test coverage                           |
+
 ## Appendix
 
 - [blueprint](./docs/blueprint.md)
