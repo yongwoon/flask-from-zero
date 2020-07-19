@@ -7,5 +7,6 @@ from flask_blog.scripts.db import InitDB
 if __name__ == "__main__":
     manager = Manager(create_app)
     # 作成した InitDB() module を init_db という名前で実行できるようにしています。
-    manager.add_command('init_db', InitDB)
+    manager.add_command('init_db', InitDB())
+    manager.add_command('drop_db', DropDB())
     manager.run()
