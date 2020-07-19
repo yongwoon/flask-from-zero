@@ -8,6 +8,7 @@
 
 - [blueprint](./docs/blueprint.md)
 - [flask 0.11 対応](docs/flask_0_1_1.md)
+- [flask 1.0 対応](docs/flask_1_0.md)
 
 ## Link
 
