@@ -31,6 +31,16 @@ coverage report -m
 | Miss      | Test されていない code 行数             |
 | Cover     | Test coverage                           |
 
+## test coverage report 作成
+
+- Generage coverage report
+
+```bash
+# 実行すると htmlcov という folder に test coverage report が出力される
+coverage html
+```
+
+
 ## Appendix
 
 - [blueprint](./docs/blueprint.md)
