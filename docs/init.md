@@ -42,3 +42,9 @@ pipenv install Flask-SQLAlchemy
 ```bash
 pipenv install Flask-Script
 ```
+
+- coverage
+
+```bash
+pipenv install coverage
+```

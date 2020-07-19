@@ -7,6 +7,8 @@ pip install flask
 pip install Flask-SQLAlchemy
 # db
 pip install Flask-Script
+# coverage
+pip install coverage
 ```
 
 ## check installed package
